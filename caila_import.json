@@ -16,7 +16,7 @@
     "shared" : false
   },
   "intents" : [ {
-    "id" : 11030390,
+    "id" : 11036268,
     "path" : "/число",
     "enabled" : true,
     "shared" : false,
@@ -28,11 +28,12 @@
       "name" : "number",
       "entity" : "duckling.number",
       "required" : true,
-      "prompts" : [ "Число?" ]
+      "prompts" : [ "Число?" ],
+      "array" : false
     } ],
     "priority" : 0
   }, {
-    "id" : 11026908,
+    "id" : 11036269,
     "path" : "/согласие",
     "enabled" : true,
     "shared" : false,
@@ -62,11 +63,12 @@
       "name" : "number",
       "entity" : "duckling.number",
       "required" : true,
-      "prompts" : [ "Загадал. Твой вариант:" ]
+      "prompts" : [ "Загадал. Твой вариант:" ],
+      "array" : false
     } ],
     "priority" : 0
   }, {
-    "id" : 11026909,
+    "id" : 11036270,
     "path" : "/несогласие",
     "enabled" : true,
     "shared" : false,
@@ -88,11 +90,12 @@
       "name" : "number",
       "entity" : "duckling.number",
       "required" : false,
-      "prompts" : [ "Я загадал число. Есть предположение?" ]
+      "prompts" : [ "Я загадал число. Есть предположение?" ],
+      "array" : false
     } ],
     "priority" : 0
   }, {
-    "id" : 11026641,
+    "id" : 11036271,
     "path" : "/пока",
     "enabled" : true,
     "shared" : false,
@@ -106,7 +109,7 @@
     "patterns" : [ ],
     "priority" : 0
   }, {
-    "id" : 11026642,
+    "id" : 11036272,
     "path" : "/привет",
     "enabled" : true,
     "shared" : false,
@@ -120,7 +123,7 @@
     "patterns" : [ ],
     "priority" : 0
   }, {
-    "id" : 11026776,
+    "id" : 11036273,
     "path" : "/сыграть",
     "enabled" : true,
     "shared" : false,
@@ -136,7 +139,7 @@
   } ],
   "entities" : [ {
     "entity" : {
-      "id" : 153693,
+      "id" : 153776,
       "name" : "New_entity",
       "enabled" : true,
       "shared" : false,
