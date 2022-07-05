@@ -10,7 +10,14 @@ tests:
     - test.xml
 
 sts:
-    noMatchThreshold: 0.2
+    noMatchThreshold: 0.1
 
 caila:
-    noMatchThreshold: 0.2
+    noMatchThreshold: 0.1
+    
+
+injector:
+    slotfilling:
+        maxSlotRetries: 3
+        stopOnAnyIntent: false
+        stopOnAnyIntentThreshold: 0.1
