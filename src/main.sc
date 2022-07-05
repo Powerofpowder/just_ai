@@ -23,14 +23,14 @@ theme: /
         # генерируем случайное число от 1000 до 10000 (невключительно)
         script:
             $session.secret = Math.floor(Math.random() * 9000) + 1000;
-            $reactions.answer("Загадано {{$session.secret}}");
+            # $reactions.answer("Загадано {{$session.secret}}");
             $reactions.transition("/Проверка");
             
     state: Проверка
         intent!: /число
         script:
             var num = $parseTree._number;
-            $reactions.answer("Ваше число {{$parseTree._number}}");
+            # $reactions.answer("Ваше число {{$parseTree._number}}");
             $session.bulls = 0;
             $session.cows = 0;
             
