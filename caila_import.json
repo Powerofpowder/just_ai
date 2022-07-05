@@ -16,7 +16,7 @@
     "shared" : false
   },
   "intents" : [ {
-    "id" : 11037488,
+    "id" : 11037513,
     "path" : "/число",
     "enabled" : true,
     "shared" : false,
@@ -33,7 +33,7 @@
     } ],
     "priority" : 0
   }, {
-    "id" : 11037489,
+    "id" : 11037514,
     "path" : "/согласие",
     "enabled" : true,
     "shared" : false,
@@ -68,7 +68,49 @@
     } ],
     "priority" : 0
   }, {
-    "id" : 11037490,
+    "id" : 11037516,
+    "path" : "/пока",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "пока"
+    }, {
+      "text" : "До свидания"
+    }, {
+      "text" : "До встречи"
+    } ],
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "id" : 11037517,
+    "path" : "/привет",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "привет"
+    }, {
+      "text" : "Здравствуйте"
+    }, {
+      "text" : "Добрый день!"
+    } ],
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "id" : 11037518,
+    "path" : "/сыграть",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Хочу сыграть"
+    }, {
+      "text" : "игра"
+    }, {
+      "text" : "давай поиграем"
+    } ],
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "id" : 11037515,
     "path" : "/несогласие",
     "enabled" : true,
     "shared" : false,
@@ -84,6 +126,8 @@
       "text" : "В другой раз"
     }, {
       "text" : "нет, спасибо"
+    }, {
+      "text" : "сдаюсь"
     } ],
     "patterns" : [ ],
     "slots" : [ {
@@ -94,52 +138,10 @@
       "array" : false
     } ],
     "priority" : 0
-  }, {
-    "id" : 11037491,
-    "path" : "/пока",
-    "enabled" : true,
-    "shared" : false,
-    "phrases" : [ {
-      "text" : "пока"
-    }, {
-      "text" : "До свидания"
-    }, {
-      "text" : "До встречи"
-    } ],
-    "patterns" : [ ],
-    "priority" : 0
-  }, {
-    "id" : 11037492,
-    "path" : "/привет",
-    "enabled" : true,
-    "shared" : false,
-    "phrases" : [ {
-      "text" : "привет"
-    }, {
-      "text" : "Здравствуйте"
-    }, {
-      "text" : "Добрый день!"
-    } ],
-    "patterns" : [ ],
-    "priority" : 0
-  }, {
-    "id" : 11037493,
-    "path" : "/сыграть",
-    "enabled" : true,
-    "shared" : false,
-    "phrases" : [ {
-      "text" : "Хочу сыграть"
-    }, {
-      "text" : "игра"
-    }, {
-      "text" : "давай поиграем"
-    } ],
-    "patterns" : [ ],
-    "priority" : 0
   } ],
   "entities" : [ {
     "entity" : {
-      "id" : 153786,
+      "id" : 153787,
       "name" : "New_entity",
       "enabled" : true,
       "shared" : false,
