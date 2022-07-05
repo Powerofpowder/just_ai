@@ -32,7 +32,7 @@ theme: /
                     }
                 }
             $session.secret = Array.join("");
-            $reactions.answer("Загадано {{$session.secret}}");
+            # $reactions.answer("Загадано {{$session.secret}}");
             $reactions.transition("/Проверка");
             
     state: Проверка
