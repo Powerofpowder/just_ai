@@ -24,14 +24,14 @@ theme: /
             # генерируем случайное число от 1000 до 10000 (невключительно)
             # $session.secret = Math.floor(Math.random() * 9000) + 1000;
             # генерируем число, в котором цифры не повторяются
-            var Array = [];
-            while (Array.length < 4) {
+            var array = [];
+            while (array.length < 4) {
                 var rand = Math.floor(Math.random() * 9) + 1;
-                if (Array.indexOf(rand) == -1) {
-                    Array.push(rand);
+                if (array.indexOf(rand) == -1) {
+                    array.push(rand);
                 }
             }
-            $session.secret = Array.join("");
+            $session.secret = array.join("");
             # $reactions.answer("Загадано {{$session.secret}}");
             $reactions.transition("/Проверка");
             
