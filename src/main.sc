@@ -29,8 +29,8 @@ theme: /
                 var rand = Math.floor(Math.random() * 9) + 1;
                 if (Array.indexOf(rand) == -1) {
                     Array.push(rand);
-                    }
                 }
+            }
             $session.secret = Array.join("");
             # $reactions.answer("Загадано {{$session.secret}}");
             $reactions.transition("/Проверка");
@@ -50,9 +50,9 @@ theme: /
                 else {
                     if ($session.secret.toString().indexOf(num.toString()[i]) !== -1) {
                         $session.cows++;
-                        }
                     }
                 }
+            }
             if ($session.bulls < 4) {
                 $reactions.answer("Быков 🐂: {{$session.bulls}}. Коров 🐄: {{$session.cows}}.\nПопробуй еще раз, чтобы угадать число целиком.");
             }
