@@ -30,7 +30,12 @@ theme: /
     state: Проверка
         intent!: /число
         script:
-            $reactions.answer(countBullsCows($parseTree._number, $session.secret));
+            if isWrongLenght ($parseTree._number) {
+                $reactions.answer('Число должно быть четырехзначным. Попробуй еще.');
+                $reactions.transition("/Игра");
+            } else {
+                $reactions.answer(countBullsCows($parseTree._number, $session.secret));
+            }
         go: /Согласен 
 
             

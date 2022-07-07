@@ -10,6 +10,14 @@ function genetareNumber() {
     return array.join("");
 }
 
+function isWrongLenght(user_number): {
+    if (user_number.toString().length < 4 || user_number.toString().length > 4) {
+        return true;
+    } else {
+        retuen false;
+    }
+}
+
 function getBullsEnding (i) {
     switch (i) {
         case 0:
