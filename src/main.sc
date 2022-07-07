@@ -23,16 +23,18 @@ theme: /
                 
     state: Игра
         script:
-            $session.secret = genetareNumber()
+            $session.secret = genetareNumber();
             $reactions.answer("Загадано {{$session.secret}}");
             $reactions.transition("/Проверка");
             
     state: Проверка
         intent!: /число
         script:
-            if isWrongLenght ($parseTree._number) {
-                $reactions.answer('Число должно быть четырехзначным. Попробуй еще.');
-                $reactions.transition("/Игра");
+            $reactions.answer($parseTree._number);
+            if (isWrongLenght($parseTree._number)) {
+                $reactions.answer("Число должно быть 4-значным. Попробуй еще.");
+            } else if (isRepeatedDigit($parseTree._number)) {
+                $reactions.answer("Цифры в числе не должны повторяться");
             } else {
                 $reactions.answer(countBullsCows($parseTree._number, $session.secret));
             }

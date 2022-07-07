@@ -10,12 +10,27 @@ function genetareNumber() {
     return array.join("");
 }
 
-function isWrongLenght(user_number): {
-    if (user_number.toString().length < 4 || user_number.toString().length > 4) {
+function isWrongLenght(user_number) {
+    if (user_number.toString().length != 4) {
         return true;
     } else {
-        retuen false;
+        return false;
     }
+}
+
+// function isRepeatedDigit(user_number) {
+// // почему-то "new Set" не работает
+//     var arr = user_number.toString().split('')
+//     var mySet = new Set(arr)
+//     return mySet.size !== arr.length;
+// }
+
+function isRepeatedDigit(user_number) {
+    var str = user_number.toString()
+    return str[0] == str[1] || str[0] == str[2] || str[0] == str[3] || str[0] == str[4] ||
+    str[1] == str[2] || str[1] == str[3] || str[1] == str[4] ||
+    str[2] == str[3] || str[2] == str[4] ||
+    str[3] == str[4];
 }
 
 function getBullsEnding (i) {
@@ -38,15 +53,20 @@ function getCowsEnding (i) {
     }
 }
 
-function getBullsCount(user_number, secret_number) {
+function getBullsCowsCount(user_number, secret_number) {
     var bulls = 0;
+    var cows = 0;
     
     for (var i = 0; i < 4; i++) {
         if (secret_number.toString()[i] === user_number.toString()[i]) {
             bulls++;
+        } else {
+            if (secret_number.toString().indexOf(user_number.toString()[i]) !== -1) {
+                cows++;
+            }
         }
     }
-    return bulls;
+    return [bulls, cows];
 }
 
 function getCowsCount(user_number, secret_number) {
@@ -62,8 +82,8 @@ function getCowsCount(user_number, secret_number) {
     
 function countBullsCows(user_number, secret_number) {
     //  $reactions.answer("Ваше число {{$parseTree._number}}");
-    var bulls = getBullsCount(user_number, secret_number);
-    var cows = getCowsCount(user_number, secret_number);
+    var bulls = getBullsCowsCount(user_number, secret_number)[0];
+    var cows = getBullsCowsCount(user_number, secret_number)[1];
     
     var bullsEnding = getBullsEnding(bulls);
     var cowsEnding = getCowsEnding(cows);
