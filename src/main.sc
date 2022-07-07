@@ -1,5 +1,7 @@
 require: slotfilling/slotFilling.sc
   module = sys.zb-common
+require: scripts/functions.js
+
 theme: /
 
     state: Начало
@@ -21,44 +23,14 @@ theme: /
                 
     state: Игра
         script:
-            # генерируем случайное число от 1000 до 10000 (невключительно)
-            # $session.secret = Math.floor(Math.random() * 9000) + 1000;
-            # генерируем число, в котором цифры не повторяются
-            var array = [];
-            while (array.length < 4) {
-                var rand = Math.floor(Math.random() * 9) + 1;
-                if (array.indexOf(rand) == -1) {
-                    array.push(rand);
-                }
-            }
-            $session.secret = array.join("");
-            # $reactions.answer("Загадано {{$session.secret}}");
+            $session.secret = genetareNumber()
+            $reactions.answer("Загадано {{$session.secret}}");
             $reactions.transition("/Проверка");
             
     state: Проверка
         intent!: /число
         script:
-            var num = $parseTree._number;
-            # $reactions.answer("Ваше число {{$parseTree._number}}");
-            $session.bulls = 0;
-            $session.cows = 0;
-            
-            for (var i = 0; i < 4; i++) {
-                if ($session.secret.toString()[i] === num.toString()[i]) {
-                        $session.bulls++;
-                    }
-                else {
-                    if ($session.secret.toString().indexOf(num.toString()[i]) !== -1) {
-                        $session.cows++;
-                    }
-                }
-            }
-            if ($session.bulls < 4) {
-                $reactions.answer("Быков 🐂: {{$session.bulls}}. Коров 🐄: {{$session.cows}}.\nПопробуй еще раз, чтобы угадать число целиком.");
-            }
-            else {
-                $reactions.answer("Быков 🐂: {{$session.bulls}}. Коров 🐄: {{$session.cows}}. Ты отгадал(а) число! Хочешь сыграть заново?");
-            }
+            $reactions.answer(countBullsCows($parseTree._number, $session.secret));
         go: /Согласен 
 
             

@@ -16,7 +16,7 @@
     "shared" : false
   },
   "intents" : [ {
-    "id" : 11041600,
+    "id" : 11041998,
     "path" : "/число",
     "enabled" : true,
     "shared" : false,
@@ -33,7 +33,7 @@
     } ],
     "priority" : 0
   }, {
-    "id" : 11041601,
+    "id" : 11041999,
     "path" : "/согласие",
     "enabled" : true,
     "shared" : false,
@@ -68,7 +68,7 @@
     } ],
     "priority" : 0
   }, {
-    "id" : 11041602,
+    "id" : 11042000,
     "path" : "/пока",
     "enabled" : true,
     "shared" : false,
@@ -82,7 +82,7 @@
     "patterns" : [ ],
     "priority" : 0
   }, {
-    "id" : 11041603,
+    "id" : 11042001,
     "path" : "/привет",
     "enabled" : true,
     "shared" : false,
@@ -96,7 +96,7 @@
     "patterns" : [ ],
     "priority" : 0
   }, {
-    "id" : 11041604,
+    "id" : 11042002,
     "path" : "/сыграть",
     "enabled" : true,
     "shared" : false,
@@ -110,7 +110,7 @@
     "patterns" : [ ],
     "priority" : 0
   }, {
-    "id" : 11041605,
+    "id" : 11042003,
     "path" : "/несогласие",
     "enabled" : true,
     "shared" : false,
@@ -141,7 +141,7 @@
   } ],
   "entities" : [ {
     "entity" : {
-      "id" : 153826,
+      "id" : 153848,
       "name" : "New_entity",
       "enabled" : true,
       "shared" : false,
