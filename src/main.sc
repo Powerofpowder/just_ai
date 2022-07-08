@@ -30,10 +30,10 @@ theme: /
     state: Проверка
         intent!: /число
         script:
-            $reactions.answer($parseTree._number);
+            # $reactions.answer($parseTree._number);
             if (isWrongLenght($parseTree._number)) {
                 $reactions.answer("Число должно быть 4-значным. Попробуй еще.");
-            } else if (isRepeatedDigit($parseTree._number)) {
+            } else if (hasRepeatedDigits($parseTree._number)) {
                 $reactions.answer("Цифры в числе не должны повторяться");
             } else {
                 $reactions.answer(countBullsCows($parseTree._number, $session.secret));

@@ -18,20 +18,19 @@ function isWrongLenght(user_number) {
     }
 }
 
-// function isRepeatedDigit(user_number) {
-// // почему-то "new Set" не работает
-//     var arr = user_number.toString().split('')
-//     var mySet = new Set(arr)
-//     return mySet.size !== arr.length;
-// }
-
-function isRepeatedDigit(user_number) {
-    var str = user_number.toString()
-    return str[0] == str[1] || str[0] == str[2] || str[0] == str[3] || str[0] == str[4] ||
-    str[1] == str[2] || str[1] == str[3] || str[1] == str[4] ||
-    str[2] == str[3] || str[2] == str[4] ||
-    str[3] == str[4];
+function hasRepeatedDigits(user_number) {
+    var array = user_number.toString().split('')
+    var valuesSoFar = Object.create(null);
+    for (var i = 0; i < array.length; ++i) {
+        var value = array[i];
+        if (value in valuesSoFar) {
+            return true;
+        }
+        valuesSoFar[value] = true;
+    }
+    return false;
 }
+
 
 function getBullsEnding (i) {
     switch (i) {
