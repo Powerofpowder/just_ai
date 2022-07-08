@@ -36,6 +36,7 @@ function hasRepeatedDigits(user_number) {
 
 
 function getBullsEnding (i) {
+    // согласование окончания слова "бык"
     switch (i) {
         case 0:
         return 'быков';
@@ -46,6 +47,7 @@ function getBullsEnding (i) {
 }
 
 function getCowsEnding (i) {
+    // согласование окончания слова "корова"
     switch (i) {
         case 0:
         return 'коров';
@@ -56,6 +58,7 @@ function getCowsEnding (i) {
 }
 
 function getBullsCowsNumber(user_number, secret_number) {
+    // подсчет коров и быков
     var bulls = 0;
     var cows = 0;
     
@@ -74,7 +77,9 @@ function getBullsCowsNumber(user_number, secret_number) {
 
     
 function countBullsCows(user_number, secret_number) {
-    //  $reactions.answer("Ваше число {{$parseTree._number}}");
+    /* собираем функционал: 
+    вызываем функцию подсчета коров и быков, согласования окончаний 
+    и возвращаем ответ для пользователя */
     var valuesList = getBullsCowsNumber(user_number, secret_number)
     var bulls = valuesList[0];
     var cows = valuesList[1];

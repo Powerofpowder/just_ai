@@ -31,7 +31,10 @@ theme: /
     state: Проверка
         intent!: /число
         script:
-            # $reactions.answer($parseTree._number);
+            /* выполняем проверку:
+            вызываем функции проверки длины и повтора цифр числа пользователя,
+            если число в нужно формате -
+            засчитываем попытку и вывызваем функцию подсчета быков и коров */
             if (isWrongLenght($parseTree._number)) {
                 $reactions.answer("Число должно быть 4-значным. Попробуй еще.");
             } else if (hasRepeatedDigits($parseTree._number)) {

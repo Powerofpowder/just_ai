@@ -16,7 +16,7 @@
     "shared" : false
   },
   "intents" : [ {
-    "id" : 11111855,
+    "id" : 11112076,
     "path" : "/сдаюсь",
     "enabled" : true,
     "shared" : false,
@@ -34,7 +34,7 @@
     "patterns" : [ ],
     "priority" : 0
   }, {
-    "id" : 11109667,
+    "id" : 11112077,
     "path" : "/число",
     "enabled" : true,
     "shared" : false,
@@ -51,7 +51,7 @@
     } ],
     "priority" : 0
   }, {
-    "id" : 11109668,
+    "id" : 11112078,
     "path" : "/согласие",
     "enabled" : true,
     "shared" : false,
@@ -86,7 +86,7 @@
     } ],
     "priority" : 0
   }, {
-    "id" : 11109669,
+    "id" : 11112079,
     "path" : "/пока",
     "enabled" : true,
     "shared" : false,
@@ -100,7 +100,7 @@
     "patterns" : [ ],
     "priority" : 0
   }, {
-    "id" : 11109670,
+    "id" : 11112080,
     "path" : "/привет",
     "enabled" : true,
     "shared" : false,
@@ -114,7 +114,7 @@
     "patterns" : [ ],
     "priority" : 0
   }, {
-    "id" : 11109671,
+    "id" : 11112081,
     "path" : "/сыграть",
     "enabled" : true,
     "shared" : false,
@@ -128,7 +128,7 @@
     "patterns" : [ ],
     "priority" : 0
   }, {
-    "id" : 11109672,
+    "id" : 11112082,
     "path" : "/несогласие",
     "enabled" : true,
     "shared" : false,
@@ -157,7 +157,7 @@
   } ],
   "entities" : [ {
     "entity" : {
-      "id" : 155899,
+      "id" : 155937,
       "name" : "New_entity",
       "enabled" : true,
       "shared" : false,
