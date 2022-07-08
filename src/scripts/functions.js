@@ -22,13 +22,14 @@ function isWrongLenght(user_number) {
 function hasRepeatedDigits(user_number) {
     // проверяем наличие повторяющихся цифр в числе пользователя
     var array = user_number.toString().split('')
-    var valuesSoFar = Object.create(null);
-    for (var i = 0; i < array.length; ++i) {
+    var valuesSoFar = [];
+    for (var i = 0; i < array.length; i++) {
         var value = array[i];
-        if (value in valuesSoFar) {
+        if (valuesSoFar.indexOf(value) !== -1) {
             return true;
+        } else {
+            valuesSoFar.push(value);
         }
-        valuesSoFar[value] = true;
     }
     return false;
 }
@@ -67,14 +68,16 @@ function getBullsCowsNumber(user_number, secret_number) {
             }
         }
     }
+    
     return [bulls, cows];
 }
 
     
 function countBullsCows(user_number, secret_number) {
     //  $reactions.answer("Ваше число {{$parseTree._number}}");
-    var bulls = getBullsCowsNumber(user_number, secret_number)[0];
-    var cows = getBullsCowsNumber(user_number, secret_number)[1];
+    var valuesList = getBullsCowsNumber(user_number, secret_number)
+    var bulls = valuesList[0];
+    var cows = valuesList[1];
     
     var bullsEnding = getBullsEnding(bulls);
     var cowsEnding = getCowsEnding(cows);

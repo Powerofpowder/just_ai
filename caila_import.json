@@ -16,6 +16,24 @@
     "shared" : false
   },
   "intents" : [ {
+    "id" : 11111855,
+    "path" : "/сдаюсь",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "сдаюсь"
+    }, {
+      "text" : "устал"
+    }, {
+      "text" : "все"
+    }, {
+      "text" : "надоело"
+    }, {
+      "text" : "закончить игру"
+    } ],
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
     "id" : 11109667,
     "path" : "/число",
     "enabled" : true,
@@ -126,8 +144,6 @@
       "text" : "В другой раз"
     }, {
       "text" : "нет, спасибо"
-    }, {
-      "text" : "сдаюсь"
     } ],
     "patterns" : [ ],
     "slots" : [ {
