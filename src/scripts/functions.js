@@ -11,6 +11,7 @@ function genetareNumber() {
 }
 
 function isWrongLenght(user_number) {
+    // проверяем длину числа пользователя
     if (user_number.toString().length != 4) {
         return true;
     } else {
@@ -19,6 +20,7 @@ function isWrongLenght(user_number) {
 }
 
 function hasRepeatedDigits(user_number) {
+    // проверяем наличие повторяющихся цифр в числе пользователя
     var array = user_number.toString().split('')
     var valuesSoFar = Object.create(null);
     for (var i = 0; i < array.length; ++i) {
@@ -52,7 +54,7 @@ function getCowsEnding (i) {
     }
 }
 
-function getBullsCowsCount(user_number, secret_number) {
+function getBullsCowsNumber(user_number, secret_number) {
     var bulls = 0;
     var cows = 0;
     
@@ -68,21 +70,11 @@ function getBullsCowsCount(user_number, secret_number) {
     return [bulls, cows];
 }
 
-function getCowsCount(user_number, secret_number) {
-    var cows = 0;
-    
-    for (var i = 0; i < 4; i++) {
-        if (secret_number.toString().indexOf(user_number.toString()[i]) !== -1) {
-            cows++;
-        }
-    }
-    return cows;
-}
     
 function countBullsCows(user_number, secret_number) {
     //  $reactions.answer("Ваше число {{$parseTree._number}}");
-    var bulls = getBullsCowsCount(user_number, secret_number)[0];
-    var cows = getBullsCowsCount(user_number, secret_number)[1];
+    var bulls = getBullsCowsNumber(user_number, secret_number)[0];
+    var cows = getBullsCowsNumber(user_number, secret_number)[1];
     
     var bullsEnding = getBullsEnding(bulls);
     var cowsEnding = getCowsEnding(cows);

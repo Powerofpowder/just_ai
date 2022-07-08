@@ -1,10 +1,63 @@
 <test>
-    <!--<test-case id="1">-->
-    <!--    <q>/start</q>-->
-    <!--    <a state = "/Начало"/>-->
-    <!--    <q>да</q>-->
-    <!--    <a state = "/Игра"/>-->
-    <!--    <q>1234</q>-->
-    <!--    <a state = "/Проверка"/>-->
-    <!--</test-case>-->
+    <test-case id="agree_to_play">
+        <q>/start</q>
+        <a state = "/Начало"/>
+        <q>да</q>
+        <a state = "/Да/Игра"/>
+    </test-case>
+    
+    <test-case id="not_agree_to_play">
+        <q>/start</q>
+        <a state = "/Начало"/>
+        <q>нет</q>
+        <a state = "/Нет"/>
+    </test-case>
+    
+    <test-case id="correct_number">
+        <q>/start</q>
+        <a state = "/Начало"/>
+        <q>да</q>
+        <a state = "/Да/Игра"/>
+        <q>1234</q>
+        <a state = "/Проверка"/>
+    </test-case>
+    
+    <test-case id="repeated_digits">
+        <q>/start</q>
+        <a state = "/Начало"/>
+        <q>да</q>
+        <a state = "/Да/Игра"/>
+        <q>1134</q>
+        <a>Цифры в числе не должны повторяться</a>
+    </test-case>
+    
+    <test-case id="wrong_lenght">
+        <q>/start</q>
+        <a state = "/Начало"/>
+        <q>да</q>
+        <a state = "/Да/Игра"/>
+        <q>123</q>
+        <a>Число должно быть 4-значным. Попробуй еще.</a>
+    </test-case>
+    
+    <test-case id="zeros">
+        <q>/start</q>
+        <a state = "/Начало"/>
+        <q>да</q>
+        <a state = "/Да/Игра"/>
+        <q>0000</q>
+        <a>Цифры в числе не должны повторяться</a>
+    </test-case>
+    
+    <test-case id="play_again">
+        <a>Ты отгадал(а) число! Хочешь сыграть заново?</a>
+        <q>да</q>
+        <a state = "/Да/Игра"/>
+    </test-case>
+    
+    <test-case id="not_play_again">
+        <a>Ты отгадал(а) число! Хочешь сыграть заново?</a>
+        <q>нет</q>
+        <a state = "/Нет"/>
+    </test-case>
 </test>    
