@@ -16,7 +16,7 @@
     "shared" : false
   },
   "intents" : [ {
-    "id" : 11041998,
+    "id" : 11109667,
     "path" : "/число",
     "enabled" : true,
     "shared" : false,
@@ -28,11 +28,12 @@
       "name" : "number",
       "entity" : "pymorphy.numb",
       "required" : true,
-      "prompts" : [ ]
+      "prompts" : [ ],
+      "array" : false
     } ],
     "priority" : 0
   }, {
-    "id" : 11041999,
+    "id" : 11109668,
     "path" : "/согласие",
     "enabled" : true,
     "shared" : false,
@@ -67,7 +68,7 @@
     } ],
     "priority" : 0
   }, {
-    "id" : 11042000,
+    "id" : 11109669,
     "path" : "/пока",
     "enabled" : true,
     "shared" : false,
@@ -81,7 +82,7 @@
     "patterns" : [ ],
     "priority" : 0
   }, {
-    "id" : 11042001,
+    "id" : 11109670,
     "path" : "/привет",
     "enabled" : true,
     "shared" : false,
@@ -95,7 +96,7 @@
     "patterns" : [ ],
     "priority" : 0
   }, {
-    "id" : 11042002,
+    "id" : 11109671,
     "path" : "/сыграть",
     "enabled" : true,
     "shared" : false,
@@ -109,7 +110,7 @@
     "patterns" : [ ],
     "priority" : 0
   }, {
-    "id" : 11042003,
+    "id" : 11109672,
     "path" : "/несогласие",
     "enabled" : true,
     "shared" : false,
@@ -140,7 +141,7 @@
   } ],
   "entities" : [ {
     "entity" : {
-      "id" : 153848,
+      "id" : 155899,
       "name" : "New_entity",
       "enabled" : true,
       "shared" : false,
